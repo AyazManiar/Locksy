@@ -19,3 +19,8 @@
 - Saved to LocalStorage
 - Copy text(Site, UserName, Password)
 - Styled Notifications (Using React-tostify)
+
+## Want to add
+- Login
+- Save to Database
+- Encryption of password while saving to LocalStorage, Database
