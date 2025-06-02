@@ -1,0 +1,88 @@
+.add div > input{
+    width: 100%;
+}
+.add input{
+    padding: 5px 15px;
+    margin: 10px 0;
+    border: 1px solid #00e417;
+    border-radius: 20px;
+}
+.add input:focus{
+    background-color: aliceblue;
+    outline: #00a410;
+}
+.add{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.pwd {
+    display: flex;
+    gap: 20px;
+    width: 100%; /* Ensures the container takes full width */
+}
+
+.pwd .input-name {
+    flex: 3 1 75%; /* 75% width */
+}
+
+.pwd .input-pwd {
+    flex: 1 1 25%; /* 25% width */
+}
+
+/* Ensure inputs take full width inside their div */
+.input-name input,
+.input-pwd .psd {
+    width: 100%;
+}
+
+.psd{
+    display: flex;
+    gap: 5px;
+    padding: 5px 15px;
+    margin: 10px 0;
+    border: 1px solid #00e417;
+    border-radius: 20px;
+}
+.psd input{
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0%;
+}
+.psd input:focus{
+    background-color: aliceblue;
+    outline: none;
+}
+.add .save{
+    width: fit-content;
+    margin: auto;
+}
+.add .save button{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 550;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 12px 30px;
+    /* background-color: #00e417; */
+    background-color: rgb(1, 6, 159);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Error Message */
+.input-error {
+    border: 2px solid red !important;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+
+.top{
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.header{
+    text-align: center;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+.password-list{
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.password-list h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+.password-list h3{
+    margin-top: 10px;
+}
