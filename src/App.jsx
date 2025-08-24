@@ -22,25 +22,19 @@ function App() {
     });
   }
 
-  const [passwordList, setPasswordList] = useState([]);
+  const [passwordList, setPasswordList] = useState(async ()=>{
+    try {
+      const response = await fetch("http://localhost:3000/api/password")
+      const data = await response.json()
+      return data;
+    } catch (error) {
+      react_toast("Failed to fetch passwords!")
+      console.error("Error fetching passwords:", error)
+      return [];
+    }
+  });
   const [info, setInfo] = useState({ site: "", userName: "", password: "" });
-
-  // Fetch passwords from backend on mount
-  useEffect(() => {
-    const fetchPasswords = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/api/password");
-        const data = await response.json();
-        setPasswordList(data);
-
-        
-      } catch (error) {
-        react_toast("Failed to fetch passwords!");
-        console.error("Error fetching passwords:", error);
-      }
-    };
-    fetchPasswords();
-  }, []);
+  
 
   const handleEdit = async (id, item) => {
     setInfo(() => ({
